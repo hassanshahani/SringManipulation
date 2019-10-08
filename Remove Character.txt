@@ -24,4 +24,4 @@ FOR Count = 1 To LENGTH(str1)
     ENDIF
 ENDFOR
 
-OUTPUT "Final string is : ", str2
+OUTPUT "Final string is : " & str2
