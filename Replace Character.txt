@@ -1,0 +1,34 @@
+DELACRE str1 : STRING
+DELACRE str2 : STRING
+DELACRE nextChar : CHARACTER
+DELACRE Char1 : CHARACTER
+DELACRE Char2 : CHARACTER
+DELACRE count : INTEGER
+
+str1 = ""
+str2 = ""
+nextChar = ''
+Char1 = ''
+Char2 = ''
+count = 0
+
+OUTPUT "Enter the string: "
+INPUT str1
+
+OUTPUT "Enter character to select: "
+INPUT Char1
+
+OUTPUT "Enter character to replace with: "
+INPUT Char2
+
+FOR count = 1 to LENGTH(str1)
+    nextChar = MID(str1, count, 1)
+    IF nextChar = Char1 
+      THEN
+        str2 = str2 & Char2
+    ELSE 
+        str2 = str2 & nextChar
+    ENDIF
+ENDFOR
+
+OUTPUT "Final String is: " & str2
