@@ -1,0 +1,27 @@
+DECLARE str1 : STRING
+DECLARE str2 : STRING
+DECLARE str3 : STRING
+DELARE fcount : INTEGER
+DELARE scount : INTEGER
+
+str1 = ""
+str2 = ""
+str3 = ""
+fcount = 0
+scount = 0
+
+OUTPUT "Enter first string : "
+INPUT str1
+
+OUTPUT "Enter second string : " 
+INPUT str2 
+
+fcount = INSTR(str1," ")
+str3 = str3 & LEFT(str1, fcount)
+
+scount = INSTR(str2," ")
+str3 = str3 & "" & MID(str2, scount+1, LENGTH(str2))
+
+OUTPUT "Final string is : ", str3
+
+
