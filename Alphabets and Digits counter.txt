@@ -1,0 +1,28 @@
+DECLARE str1 : STRING
+DECLARE alpha: INTEGER
+DECLARE digit : INTEGER
+DELARE count : INTEGER
+DECLARE chr : CHARACTER
+
+str1 = ""
+alpha = 0
+digit = 0
+count = 0
+chr = ""
+
+OUTPUT "Enter word : "
+INPUT str1
+
+FOR count = 1 to LENGTH(str1)
+  chr = MID(str1, count, 1) 
+  IF LCASE(chr) >= "a" AND IF LCASE(chr) <= "z"
+    THEN alpha = alpha + 1
+  ELSEIF UCASE(chr) >= "A" AND IF UCASE(chr) <= "Z"
+    THEN alpha = alpha + 1
+  ELSEIF chr >= 0 AND CHR <= 9
+    THEN digit = digit + 1
+  ENDIF
+NEXT COUNT
+
+OUTPUT "No. of alphabets are : ", alpha
+OUTPUT "No. of digits are : ", digits
